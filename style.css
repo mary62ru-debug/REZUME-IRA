@@ -1,0 +1,397 @@
+/* Сброс стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Шапка */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.position {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.contact-item a:hover {
+    opacity: 0.8;
+}
+
+.icon {
+    font-size: 1.2em;
+}
+
+.expectations {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.expectation-item {
+    margin: 8px 0;
+    font-size: 0.95em;
+}
+
+/* Секции */
+.section {
+    padding: 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #667eea;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    display: inline-block;
+}
+
+.content {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Навыки */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+}
+
+.skill-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Опыт работы */
+.experience-item {
+    margin-bottom: 35px;
+    padding-left: 20px;
+    border-left: 3px solid #667eea;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-header h3 {
+    color: #333;
+    font-size: 1.3em;
+}
+
+.date {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.95em;
+    white-space: nowrap;
+}
+
+.company {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.experience-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Образование */
+.education-item {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.education-header h3 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.education-details p {
+    margin: 8px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Сертификаты */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.certificate-card {
+    display: flex;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.certificate-card:hover {
+    transform: scale(1.02);
+}
+
+.cert-icon {
+    font-size: 2.5em;
+}
+
+.cert-content h3 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.cert-provider {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cert-date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Дополнительная информация */
+.additional-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.info-block {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-block h3 {
+    color: #667eea;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.info-block p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CTA кнопка */
+.cta-section {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 18px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Футер */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+}
+
+/* Анимации */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.8em;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .skills-grid,
+    .certificates-grid,
+    .additional-info {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.5em;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 15px 35px;
+        font-size: 1em;
+    }
+}
